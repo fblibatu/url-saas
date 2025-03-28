@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+}
+
+/* Navbar özelleştirmeleri */
+.navbar {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+.navbar-brand img {
+    margin-right: 8px;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fc 0%, #e9ecef 100%);
+}
+
+/* URL kısaltma kartı */
+.url-shortener-card {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.url-shortener-card .form-control {
+    padding: 0.75rem 1rem;
+}
+
+/* Özellik kartları */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buton özelleştirmeleri */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #3a5bc7;
+    border-color: #3a5bc7;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .cta-section .btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* QR kod animasyonu */
+#qrCodeContainer {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+#qrCodeContainer.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Footer stil */
+footer {
+    box-shadow: 0 -0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.social-links i:hover {
+    transform: translateY(-3px);
+}
